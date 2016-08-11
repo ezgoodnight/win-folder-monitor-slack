@@ -10,12 +10,12 @@
 				$shortPath = ($path -split '\\')[-1]
 				$file = $Event.SourceEventArgs.File
                 $changeType = $Event.SourceEventArgs.ChangeType
-                $token = "xoxb-58139537360-UKSMs6KIX0pNe440HyP0ljhR"
+                $token = "token goes here"
 				$channel = "#bot-testing"
 				$text = "$changeType, $shortPath"
-				$user = "U02STBA45"
-				$username = "loadbot"
-				$bot_id = "B19LSCTKJ"
+				$user = "usernumber"
+				$username = "botuser"
+				$bot_id = "botid"
 				$as_user = "true"
 				$postSlackMessage = @{token=$token; channel=$channel; text=$text; user=$user; bot_id=$bot_id; username=$username; as_user=$as_user}
 				Invoke-RestMethod -Uri https://slack.com/api/chat.postMessage -Body $postSlackMessage
